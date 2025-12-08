@@ -1,0 +1,20 @@
+{
+  "bottomRow": 15,
+  "defaultText": "",
+  "dynamicBindingPathList": [],
+  "dynamicTriggerPathList": [],
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isRequired": false,
+  "label": "",
+  "leftColumn": 1,
+  "parentId": "container1",
+  "placeholderText": "Enter tag name...",
+  "resetOnSubmit": true,
+  "rightColumn": 30,
+  "topRow": 7,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "input1",
+  "widgetName": "TagInput"
+}

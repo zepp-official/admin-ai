@@ -1,0 +1,21 @@
+{
+  "bottomRow": 8,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "fontSize": "1rem",
+  "fontStyle": "NORMAL",
+  "leftColumn": 2,
+  "parentId": "listCanvas1",
+  "rightColumn": 38,
+  "text": "{{currentItem.tagName}}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 2,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "listText1",
+  "widgetName": "TagNameText"
+}

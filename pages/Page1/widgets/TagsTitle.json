@@ -1,0 +1,16 @@
+{
+  "bottomRow": 5,
+  "fontSize": "1.5rem",
+  "fontStyle": "BOLD",
+  "leftColumn": 1,
+  "parentId": "container1",
+  "rightColumn": 25,
+  "text": "Tag Manager",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 1,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "text1",
+  "widgetName": "TagsTitle"
+}

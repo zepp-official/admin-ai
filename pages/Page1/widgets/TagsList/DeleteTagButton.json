@@ -1,0 +1,21 @@
+{
+  "borderRadius": "0.375rem",
+  "bottomRow": 8,
+  "buttonColor": "#DD4B39",
+  "dynamicBindingPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "trash",
+  "leftColumn": 40,
+  "onClick": "{{JSObject1.deleteTag(currentItem.tagIndex)}}",
+  "parentId": "listCanvas1",
+  "rightColumn": 44,
+  "topRow": 2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "listButton1",
+  "widgetName": "DeleteTagButton"
+}

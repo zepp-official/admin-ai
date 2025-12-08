@@ -1,0 +1,35 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "bottomRow": 57,
+  "children": [
+    {
+      "backgroundColor": "#F8F8F8",
+      "borderRadius": "0.375rem",
+      "bottomRow": 10,
+      "detachFromLayout": true,
+      "leftColumn": 0,
+      "parentId": "list1",
+      "rightColumn": 46,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "widgetId": "listCanvas1",
+      "widgetName": "TagsListCanvas"
+    }
+  ],
+  "dynamicBindingPathList": [
+    {
+      "key": "listData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "itemSpacing": 8,
+  "leftColumn": 1,
+  "listData": "{{JSObject1.tags.map((tag, index) => ({tagName: tag, tagIndex: index}))}}",
+  "parentId": "container1",
+  "rightColumn": 47,
+  "topRow": 17,
+  "type": "LIST_WIDGET_V2",
+  "version": 2,
+  "widgetId": "list1",
+  "widgetName": "TagsList"
+}
