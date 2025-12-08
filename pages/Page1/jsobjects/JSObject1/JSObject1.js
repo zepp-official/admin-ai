@@ -1,12 +1,32 @@
 export default {
-	myVar1: [],
+	tags: ['JavaScript', 'Python', 'Appsmith'],
 	myVar2: {},
-	myFun1 () {
-		//	write code here
-		//	this.myVar1 = [1,2,3]
+
+	addTag(tagName) {
+		// Validate input
+		if (!tagName || tagName.trim() === '') {
+			showAlert('Please enter a tag name', 'error');
+			return;
+		}
+
+		const trimmedTag = tagName.trim();
+
+		// Check for duplicates
+		if (this.tags.includes(trimmedTag)) {
+			showAlert('Tag already exists', 'warning');
+			return;
+		}
+
+		// Add the new tag
+		this.tags = [...this.tags, trimmedTag];
+		showAlert('Tag added successfully', 'success');
 	},
-	async myFun2 () {
-		//	use async-await or promises
-		//	await storeValue('varName', 'hello world')
+
+	deleteTag(index) {
+		if (index >= 0 && index < this.tags.length) {
+			const deletedTag = this.tags[index];
+			this.tags = this.tags.filter((_, i) => i !== index);
+			showAlert(`Tag "${deletedTag}" deleted`, 'success');
+		}
 	}
 }

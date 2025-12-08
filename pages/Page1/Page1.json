@@ -22,7 +22,162 @@
           "type": "CANVAS_WIDGET",
           "version": 94,
           "widgetId": "0",
-          "widgetName": "MainContainer"
+          "widgetName": "MainContainer",
+          "children": [
+            {
+              "type": "CONTAINER_WIDGET",
+              "widgetId": "container1",
+              "widgetName": "TagsContainer",
+              "leftColumn": 2,
+              "rightColumn": 50,
+              "topRow": 2,
+              "bottomRow": 60,
+              "parentId": "0",
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": "0.375rem",
+              "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+              "children": [
+                {
+                  "type": "TEXT_WIDGET",
+                  "widgetId": "text1",
+                  "widgetName": "TagsTitle",
+                  "leftColumn": 1,
+                  "rightColumn": 25,
+                  "topRow": 1,
+                  "bottomRow": 5,
+                  "parentId": "container1",
+                  "text": "Tag Manager",
+                  "fontSize": "1.5rem",
+                  "fontStyle": "BOLD",
+                  "textAlign": "LEFT",
+                  "textColor": "#231F20",
+                  "version": 1
+                },
+                {
+                  "type": "INPUT_WIDGET_V2",
+                  "widgetId": "input1",
+                  "widgetName": "TagInput",
+                  "leftColumn": 1,
+                  "rightColumn": 30,
+                  "topRow": 7,
+                  "bottomRow": 15,
+                  "parentId": "container1",
+                  "label": "",
+                  "inputType": "TEXT",
+                  "placeholderText": "Enter tag name...",
+                  "defaultText": "",
+                  "version": 2,
+                  "isRequired": false,
+                  "isDisabled": false,
+                  "resetOnSubmit": true,
+                  "dynamicBindingPathList": [],
+                  "dynamicTriggerPathList": []
+                },
+                {
+                  "type": "BUTTON_WIDGET",
+                  "widgetId": "button1",
+                  "widgetName": "AddTagButton",
+                  "leftColumn": 31,
+                  "rightColumn": 43,
+                  "topRow": 7,
+                  "bottomRow": 15,
+                  "parentId": "container1",
+                  "text": "Add Tag",
+                  "buttonStyle": "PRIMARY",
+                  "buttonColor": "#03B365",
+                  "borderRadius": "0.375rem",
+                  "version": 1,
+                  "isDisabled": false,
+                  "dynamicBindingPathList": [],
+                  "dynamicTriggerPathList": [
+                    {
+                      "key": "onClick"
+                    }
+                  ],
+                  "onClick": "{{JSObject1.addTag(TagInput.text); TagInput.clearValue();}}"
+                },
+                {
+                  "type": "LIST_WIDGET_V2",
+                  "widgetId": "list1",
+                  "widgetName": "TagsList",
+                  "leftColumn": 1,
+                  "rightColumn": 47,
+                  "topRow": 17,
+                  "bottomRow": 57,
+                  "parentId": "container1",
+                  "backgroundColor": "#FFFFFF",
+                  "itemSpacing": 8,
+                  "version": 2,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "listData"
+                    }
+                  ],
+                  "dynamicTriggerPathList": [],
+                  "listData": "{{JSObject1.tags.map((tag, index) => ({tagName: tag, tagIndex: index}))}}",
+                  "children": [
+                    {
+                      "type": "CANVAS_WIDGET",
+                      "widgetId": "listCanvas1",
+                      "widgetName": "TagsListCanvas",
+                      "leftColumn": 0,
+                      "rightColumn": 46,
+                      "topRow": 0,
+                      "bottomRow": 10,
+                      "parentId": "list1",
+                      "detachFromLayout": true,
+                      "backgroundColor": "#F8F8F8",
+                      "borderRadius": "0.375rem",
+                      "children": [
+                        {
+                          "type": "TEXT_WIDGET",
+                          "widgetId": "listText1",
+                          "widgetName": "TagNameText",
+                          "leftColumn": 2,
+                          "rightColumn": 38,
+                          "topRow": 2,
+                          "bottomRow": 8,
+                          "parentId": "listCanvas1",
+                          "text": "{{currentItem.tagName}}",
+                          "fontSize": "1rem",
+                          "fontStyle": "NORMAL",
+                          "textAlign": "LEFT",
+                          "textColor": "#231F20",
+                          "version": 1,
+                          "dynamicBindingPathList": [
+                            {
+                              "key": "text"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ICON_BUTTON_WIDGET",
+                          "widgetId": "listButton1",
+                          "widgetName": "DeleteTagButton",
+                          "leftColumn": 40,
+                          "rightColumn": 44,
+                          "topRow": 2,
+                          "bottomRow": 8,
+                          "parentId": "listCanvas1",
+                          "iconName": "trash",
+                          "buttonColor": "#DD4B39",
+                          "borderRadius": "0.375rem",
+                          "version": 1,
+                          "dynamicBindingPathList": [],
+                          "dynamicTriggerPathList": [
+                            {
+                              "key": "onClick"
+                            }
+                          ],
+                          "onClick": "{{JSObject1.deleteTag(currentItem.tagIndex)}}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       }
     ],
