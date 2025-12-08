@@ -19,15 +19,7 @@
   "pages": [
     {
       "id": "Page1",
-      "isDefault": false
-    },
-    {
-      "id": "BadgeTemplateList",
       "isDefault": true
-    },
-    {
-      "id": "BadgeTemplateForm",
-      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {
