@@ -9,9 +9,11 @@
     }
   ],
   "iconName": "trash",
+  "isVisible": true,
   "leftColumn": 40,
   "onClick": "{{JSObject1.deleteTag(currentItem.tagIndex)}}",
   "parentId": "listCanvas1",
+  "renderMode": "CANVAS",
   "rightColumn": 44,
   "topRow": 2,
   "type": "ICON_BUTTON_WIDGET",

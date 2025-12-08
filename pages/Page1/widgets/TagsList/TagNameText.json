@@ -5,10 +5,13 @@
       "key": "text"
     }
   ],
+  "dynamicTriggerPathList": [],
   "fontSize": "1rem",
   "fontStyle": "NORMAL",
+  "isVisible": true,
   "leftColumn": 2,
   "parentId": "listCanvas1",
+  "renderMode": "CANVAS",
   "rightColumn": 38,
   "text": "{{currentItem.tagName}}",
   "textAlign": "LEFT",

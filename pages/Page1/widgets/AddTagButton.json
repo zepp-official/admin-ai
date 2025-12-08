@@ -10,9 +10,11 @@
     }
   ],
   "isDisabled": false,
+  "isVisible": true,
   "leftColumn": 31,
   "onClick": "{{JSObject1.addTag(TagInput.text); TagInput.clearValue();}}",
   "parentId": "container1",
+  "renderMode": "CANVAS",
   "rightColumn": 43,
   "text": "Add Tag",
   "topRow": 7,
