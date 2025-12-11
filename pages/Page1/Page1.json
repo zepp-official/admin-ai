@@ -22,7 +22,31 @@
           "type": "CANVAS_WIDGET",
           "version": 94,
           "widgetId": "0",
-          "widgetName": "MainContainer"
+          "widgetName": "MainContainer",
+          "children": [
+            {
+              "animateLoading": true,
+              "bottomRow": 8,
+              "boxShadow": "none",
+              "widgetName": "Tags",
+              "defaultOptionValue": "{{ TagStore.getSelectedTags() }}",
+              "dynamicBindingPathList": [
+                {
+                  "key": "sourceData"
+                },
+                {
+                  "key": "defaultOptionValue"
+                }
+              ],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "onOptionChange": "{{ TagStore.updateSelection(Tags.selectedOptionValues) }}",
+              "sourceData": "{{ TagStore.getAvailableTags().map(tag => ({ label: tag, value: tag })) }}"
+            }
+          ]
         }
       }
     ],

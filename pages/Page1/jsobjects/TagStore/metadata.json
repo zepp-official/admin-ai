@@ -1,0 +1,16 @@
+{
+    "gitSyncId": "6911372352f60b7cd8aa9394_tag_store_id",
+    "id": "Page1_TagStore",
+    "unpublishedCollection": {
+        "name": "TagStore",
+        "pageId": "Page1",
+        "pluginId": "js-plugin",
+        "pluginType": "JS",
+        "variables": [
+            {
+                "name": "defaultTags",
+                "value": "[\"High Priority\", \"Bug\", \"Feature\", \"Design\", \"Marketing\"]"
+            }
+        ]
+    }
+}
